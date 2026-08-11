@@ -1,7 +1,5 @@
 @import 'tailwindcss';
 
-/* Heavy-equipment industrial yellow accent. */
-
 @theme {
   /* Barlow Condensed for industrial display, Bricolage Grotesque for body text, JetBrains Mono for codes and labels. */
   --font-display: 'Barlow Condensed', 'Impact', 'Arial Narrow', sans-serif;
