@@ -1,7 +1,5 @@
-node_modules/
 venv/
 __pycache__/
 *.pyc
-media/
-db.sqlite3
 .env
+db.sqlite3
