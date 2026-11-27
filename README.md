@@ -21,6 +21,7 @@ Built with Django 4.2, MySQL, Tailwind CSS and JavaScript. Academic team project
 You need Python 3.12 and MySQL (XAMPP works).
 
 1. Create a MySQL database named `ebms_db`. The app connects as `root` with no password on `127.0.0.1:3306`. Change `DATABASES` in `ebms_app/settings.py` if yours is different.
+   Copy `.env.example` to `.env`, set `SECRET_KEY` to a long random string, and set `DB_PASSWORD` if your MySQL user has one.
 2. Install the packages and build the tables:
    ```bash
    python -m venv .venv
@@ -33,4 +34,8 @@ You need Python 3.12 and MySQL (XAMPP works).
 
 The compiled stylesheet is already included. Run `npm install` and `npm run tailwind` only if you change the styles.
 
-`SECRET_KEY` and `DEBUG = True` in `settings.py` are for local use only. Replace them before putting the app online.
+Secrets live in `.env`, which git ignores. `DEBUG = True` in `settings.py` is for local use only. Turn it off before putting the app online.
+
+## Note on secrets
+
+This repository does not include the project's secret key or database password. Copy `.env.example` to `.env` and fill in your own values before running the app. Never commit `.env`.
